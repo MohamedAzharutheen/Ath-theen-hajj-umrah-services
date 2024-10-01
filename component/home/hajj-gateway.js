@@ -1,0 +1,81 @@
+import React from 'react'
+
+export default function HajjGateway() {
+  return (
+  <>
+  <section className='gateway-bg mt70 df pdtb20'>
+  <div className="overlay"></div>
+  <div className='container df fac '>
+    <div className='content col-12 col-lg-6'>
+    <h2 className='fs-40 mfs-24 cw fw7'>Ath-Theen Hajj </h2>
+    <p className='fs22 ls025 mfs-19 cw fw5 pdt16'>Your Gateway to a Journey of a Lifetime</p>
+    <p className='fs16 lnh27 ls025 mfs-14 cw fw5 pdt24'>Your Gateway to a Journey of a Lifetime. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis eros sit amet turpis egestas, vitae lacinia velit placerat.</p>
+    <div className='mt-5 df gap24 fw mfjc'>
+    <button className='reg-btn pd10 fs-16 fwb cw'>Start Registration</button>
+    <button className='enq-btn fs-16 pd10 logo-clr'>Register Assistance</button>
+    </div>
+    </div>
+
+  </div>
+
+  </section>
+ <style jsx>
+ {`
+ .gateway-bg{
+        background-image: url('/assets/images/dua-image.jpg');
+        width:100%;
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position: cover;
+        background-size: 100% 100%;
+        position: relative;
+        z-index: 1;
+ }
+        .reg-btn{
+         background-color: #e9c751;
+         border-radius: 10px;
+         border: 1px solid #e9c751;
+         transition: all 0.4s linear;
+
+        }
+         .reg-btn:hover{
+          background-color: transparent;
+          color: #e9c751;
+         }
+ .enq-btn{
+          background-color: transparent;
+         border-radius: 10px;
+         border: 1px solid #e9c751;
+         transition: all 0.4s linear;
+ }
+         .enq-btn:hover{
+          background-color: #e9c751;
+          border: 1px solid #e9c751;
+          color: #fff;
+         }
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7); /* Overlay with opacity */
+          z-index: 1;
+        }
+        .content {
+          position: relative;
+          z-index: 2;
+        }
+        @media only screen and (max-width: 500px){
+    .gateway-bg {
+        height: auto;
+      }
+
+        }
+ `}
+ </style> 
+  </>
+  )
+}
