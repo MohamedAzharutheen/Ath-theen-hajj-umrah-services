@@ -13,7 +13,7 @@ export default function Journey() {
                 <Image layout='responsive' className='dn mdb' src={"/assets/images/journey.png"} width={500} height={500} alt='Journey-Img' loading='lazy'/>  
             </div>
             <div className='col-12 col-lg-6 df fdc fjc'>
-                <h4 className={`fs33 lnh50 mfs-24 cw`}>Ath-Theen Hajj - Your Gateway To The Journey Of Alife Time</h4>
+                <h4 className={`fs33 lnh50 mfs-24 cw`}> <span className="logo-clr fwb"> Ath-Theen  </span> Hajj & Umrah- Your Gateway To The Journey Of Alife Time</h4>
                 <p className='fs19 lnh33 mfs-16 mt-1 dim-clr'>Ath-Theen Hajj is here to guide you on your sacred pilgrimage with ease and care. We provide comprehensive support from planning to completion, allowing you to focus on your spiritual experience while we handle the logistics of your Hajj or Umrah journey.</p>
                 <p className='fs-19 mfs-16 mt-3 dim-clr'>We offer customized packages to suit every pilgrim’s needs, whether budget-friendly or luxury. Our services cover visa processing, accommodation, transportation, and guided tours, ensuring your journey is smooth, organized, and spiritually fulfilling.</p>
                <div className='mt-4 df gap20'>

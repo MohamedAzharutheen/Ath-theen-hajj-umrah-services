@@ -7,12 +7,12 @@ export default function HajjGateway() {
   <div className="overlay"></div>
   <div className='container df fac '>
     <div className='content col-12 col-lg-6'>
-    <h2 className='fs-40 mfs-24 cw fw7'>Ath-Theen Hajj </h2>
+    <h2 className='fs-40 mfs-24 cw fw7'> <span className="logo-clr fwb"> Ath-Theen </span> Hajj </h2>
     <p className='fs22 ls025 mfs-19 cw fw5 pdt16'>Your Gateway to a Journey of a Lifetime</p>
     <p className='fs16 lnh27 ls025 mfs-14 cw fw5 pdt24'>Your Gateway to a Journey of a Lifetime. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis eros sit amet turpis egestas, vitae lacinia velit placerat.</p>
     <div className='mt-5 df gap24 fw mfjc'>
-    <button className='reg-btn pd10 fs-16 fwb cw'>Start Registration</button>
-    <button className='enq-btn fs-16 pd10 logo-clr'>Register Assistance</button>
+    <button className='reg-btn pd10 fs-16 fwb '>Start Registration</button>
+    <button className='enq-btn fs-16 pd10 cw fwb'>Register Assistance</button>
     </div>
     </div>
 
@@ -42,7 +42,7 @@ export default function HajjGateway() {
         }
          .reg-btn:hover{
           background-color: transparent;
-          color: #e9c751;
+          color: #fff;
          }
  .enq-btn{
           background-color: transparent;
@@ -53,7 +53,7 @@ export default function HajjGateway() {
          .enq-btn:hover{
           background-color: #e9c751;
           border: 1px solid #e9c751;
-          color: #fff;
+          color: #000;
          }
         .overlay {
           position: absolute;

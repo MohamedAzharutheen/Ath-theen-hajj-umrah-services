@@ -1,220 +1,143 @@
-import React from "react";
-import Image from "next/image";
-
-const Banner = () => {
+import Image from 'next/image'
+import Link from 'next/link';
+import React from 'react'
+import { motion } from 'framer-motion';
+export default function Banner() {
   return (
     <>
-      <section className="slider">
-        <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active" data-bs-interval="2000">
-              <Image layout="responsive" src={"/assets/images/banner/masjidh.jpg"} width={1240} height={600} className="d-block w-100" alt="First slide" />
-              <div className="carousel-caption">
-                <div className="slider_des">
-                  <h5 className="heading">
-                    JOURNEY TO <span>EXPLORE WORLD</span>
-                  </h5>
-                  <p className="sub_text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  </p>
-                </div>
-              </div>
+    <section className='bg-img pdb50'>
+     <div className='container'>
+   <div className='df fjsa fac  pdt40 mfdc '>
+    <div className='w50p mw100p mb40'>
+      <h4 className={`fs-45 lnh70 mfs-24  fwb`}>Begin Your  <br/><span className='ylw-clr fwb'>  Spiritual Journey  </span><br/>with Ath-Theen</h4>
+      <p className={`fs19 mfs-16 mt32`}>Each step toward the sacred cities of Makkah and Madinah is a profound commitment. Ath-Theen Hajj and Umrah Services guide you through every phase, ensuring a rewarding, well-prepared pilgrimage experience that resonates deeply within.</p>
+      <div className="mt50">
+            <Link href={`/contact`}>  <button className={` btn-box cursor fs-16 cw`}>Reach Out to Us</button> </Link>
             </div>
-            <div className="carousel-item" data-bs-interval="2000">
-              <Image layout="responsive" src={"/assets/images/banner/masjidh.jpg"} width={1240} height={600} className="d-block w-100" alt="Second slide" />
-              <div className="carousel-caption">
-                <div className="slider_des">
-                  <h5 className="heading">
-                    BEAUTIFUL PLACE <span>TO VISIT</span>
-                  </h5>
-                  <p className="sub_text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  </p>
+
+
+
+    </div>
+    <div className='pos-r'>
+             <Image className='mdn' src={"/assets/images/banner/hajj.png"} width={480} height={574}  alt='Lady-img' quality={100} loading='lazy'
+               style={{ width: '500', height: 'auto' }}/>
+             <Image className='dn mdb' src={"/assets/images/banner/hajj.png"} width={290} height={374}  alt='Lady-img' quality={100} loading='lazy'/>
+
+  {/* Animated Active Box - Left */}
+  <motion.div
+                className="active-box-left pd10"
+                animate={{ y: [0, -40, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: 'mirror',
+                  duration: 10,
+                  ease: 'easeInOut',
+                }}
+              >
+                <div className='df fac gap10'>
+                    <Image src={"/assets/images/banner/kaaba.svg"} width={30} height={30} alt='User-Icon' loading='lazy'/>
+                <p className={`fs-18 mfs-16 fw6`}>2000+</p>
                 </div>
-              </div>
+            <p className={`fs-12 drk-dim tac pdt6`}>Hajj Service</p>
+            </motion.div>
+
+         {/* Animated Active Box - Left */}
+  <motion.div
+                className=" active-box-right pd10"
+                animate={{ y: [0, -40, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: 'mirror',
+                  duration: 10,
+                  ease: 'easeInOut',
+                  delay: 4
+                }}
+              >
+            <div className='df fac gap10'>
+                <Image src={"/assets/images/banner/umrah.svg"} width={30} height={30} alt='User-Icon' loading='lazy'/>
+              <p className={`fs-18  mfs-16 fw6`}>3500+</p>
             </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
+            <p className={`fs-12 drk-dim tac pdt6 `}>Umrah Service</p>
+        </motion.div>
         </div>
-      </section>
-      <style jsx global>{`
-        .slider {
-          position: relative;
-          z-index: 1; /* Ensure banner is above everything */
+ 
+   </div>
+
+   </div>
+    </section>
+
+    {/* <section className='container'>
+        <div className=''>
+            <Image src={"/master-training/image.png"} width={400} height={400} alt='Imabge' />
+         </div>
+    </section> */}
+    <style jsx>
+        {`
+                .bg-img{
+            // background-image: url('/assets/images/banner/mainsec-bg.webp');
+            // background: linear-gradient(90deg, #0cc0df, #ffdef9);
+        //  background: linear-gradient(90deg, #e9c751 0%, #ffffff 100%);
+        // background: linear-gradient(90deg, #004D00 0%, #87CEEB 100%);
+
+            width:100%;
+            height: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: cover;
+            background-size: 100% 100%;
+            
         }
+         .btn-box { 
+              padding: 10px;
+              border-radius: 10px;
+              background-color:#FFA900;
+              // background-color:#EF90EB;
+              border: none;
+              transition: all 0.4s ease-in-out;
+              width: 400px;
+               
 
-        .carousel-caption {
-          z-index: 10;
-          bottom: 20%;
+
+
+           
+              @media only screen and (max-width: 1250px){
+              .tfdc{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              }
+                         .card{
+              background-color: #FFFFFF;
+              border-radius: 10px;
+              box-shadow: 0px 4px 16px 0px #00000040;
+              width: 500px;
+              }
+              }
+                 @media only screen and (max-width: 500px){
+                       .btn-box { 
+              padding: 10px;
+              border-radius: 10px;
+              background-color:#FFA900;
+              border: none;
+              transition: all 0.4s ease-in-out;
+              width: 100%;
+               
+            }
+          .bg-img{
+             background-position: center;
+                background-repeat:no-repeat;
+             padding-top: 0%;
+                 height:100%;
+
         }
+   
 
-        .carousel-caption h5 {
-          font-size: 55px;
-          color: var(--white);
-          line-height: 140%;
-          text-align: center;
-          font-weight: 900;
-          letter-spacing: 1.5px;
-        }
+              }
 
-        .carousel-caption h5 span {
-          display: block;
-        }
-
-        .carousel-caption .slider_des p {
-          font-size: var(--subTitle);
-          color: var(--white);
-          line-height: 150%;
-          text-align: center;
-          font-weight: 500;
-        }
-
-        .carousel::after {
-          content: "";
-          background-color: rgba(0, 0, 0, 0.6);
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-          z-index: 100;
-          position: absolute;
-          top: 45%;
-          width: 55px;
-          height: 55px;
-          display: block;
-          border-radius: 100%;
-          transition: box-shadow 0.3ms;
-          background: var(--primaryClr);
-          opacity: 1;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-          box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.267);
-        }
-
-        .carousel-control-prev::after,
-        .carousel-control-next::after,
-        .carousel-control-prev::before,
-        .carousel-control-next::before {
-          content: "";
-          position: absolute;
-          left: 43%;
-          background: #ffffff;
-          width: 0.4rem;
-          min-width: 3px;
-          border-radius: 3px;
-          height: 34%;
-        }
-
-        .carousel-control-prev {
-          left: 40px;
-        }
-
-        .carousel-control-prev::before {
-          transform: rotate(45deg);
-          top: 24%;
-        }
-
-        .carousel-control-prev::after {
-          transform: rotate(-45deg);
-          bottom: 24%;
-        }
-
-        .carousel-control-next {
-          right: 40px;
-        }
-
-        .carousel-control-next::before {
-          left: auto;
-          right: 43%;
-          transform: rotate(-45deg);
-          top: 24%;
-        }
-
-        .carousel-control-next::after {
-          left: auto;
-          right: 43%;
-          transform: rotate(45deg);
-          bottom: 24%;
-        }
-
-        .carousel-control-prev span,
-        .carousel-control-next span {
-          display: none;
-        }
-
-        @media only screen and (max-width: 991px) {
-          .carousel-caption {
-            bottom: 18%;
-          }
-
-          .carousel-caption h5 {
-            font-size: 35px;
-          }
-
-          .carousel-caption .slider_des p {
-            font-size: 16px;
-          }
-        }
-
-        @media only screen and (max-width: 767px) {
-          .carousel-item img {
-            height: 350px;
-            object-fit: fill;
-          }
-
-          .carousel-caption {
-            bottom: 22%;
-            padding: 0 0 20px 0;
-          }
-
-          .carousel-caption h5 {
-            font-size: 26px;
-          }
-
-          .carousel-caption h5 span {
-            display: inline-block;
-          }
-
-          .carousel-caption .slider_des p {
-            font-size: 14px;
-          }
-
-          .carousel-control-next,
-          .carousel-control-prev {
-            width: 40px;
-            height: 40px;
-          }
-        }
-
-        @media only screen and (max-width: 420px) {
-          .carousel-caption {
-            right: 3%;
-            left: 3%;
-            bottom: 16%;
-            padding: 0 0 20px 0;
-          }
-
-          .carousel-control-next,
-          .carousel-control-prev {
-            width: 30px;
-            height: 30px;
-          }
-        }
-      `}</style>
+        `}
+    </style>
+    
     </>
-  );
-};
-
-export default Banner;
+  )
+}

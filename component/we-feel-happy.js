@@ -10,7 +10,7 @@ export default function WeFeelHappy() {
     year:"2018"
   },
   {
-    icon:<TiWorld size={60} color='#337ab7'/>,
+    icon:<TiWorld size={60} color='#4CAF50'/>,
 
   },
   {
@@ -25,7 +25,7 @@ export default function WeFeelHappy() {
         <div className=' container'>
         <div className='row mt-5  '>
            <div className='col-12 col-lg-6'>
-            <h4 className={`fs-24 mfs-19 logo-clr`}>We Feel Happy To Help You</h4>
+            <h4 className={`fs-24 mfs-19  fw7`}><span className='logo-clr fw7'> We Feel Happy </span> To Help You</h4>
             <p className={`fs19 lh33 mfs-16  mt16  pdt20`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
             <p className={`fs-19 mfs-16 mt16  pdt20`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
            </div>
@@ -43,7 +43,7 @@ export default function WeFeelHappy() {
 <div className='total-passenger tac ' key={index}>
 {items.icon && (
   <div className='umrah-circle tac '>  <p className={`fs-14 cw`}>{items.icon}</p>
- <p className={`fs-14 cw`}>Umrah Tour <br/>Package</p>
+ <p className={`fs-14 fw6`}>Umrah Tour <br/>Package</p>
  </div>)}
 {items.totalps && items.year &&
 <>
@@ -85,7 +85,7 @@ export default function WeFeelHappy() {
         }
         .umrah-circle{
           border-radius: 100%;
-          background-color: #545252;
+          background-color: #e9c751;
           width: 145px;
           height: 145px;
           padding: 20px;
