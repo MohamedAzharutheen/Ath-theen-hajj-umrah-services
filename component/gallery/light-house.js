@@ -57,6 +57,7 @@ const Gallery = () => {
           <motion.img
             key={index}
             src={src}
+            className="img-responsive"
             alt={`Gallery Image ${index + 1}`}
             onClick={() => handleImageLoad(index)} // Load and open the lightbox
             whileHover={{ scale: 1.05 }} // Zoom effect on hover

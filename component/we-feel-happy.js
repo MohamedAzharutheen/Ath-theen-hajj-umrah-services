@@ -1,21 +1,24 @@
 import React from 'react'
 import { TiWorld } from "react-icons/ti";
 import { Ri24HoursLine } from "react-icons/ri";
+import ScrollAnimation from './animation/scrolling-animations';
 export default function WeFeelHappy() {
 
   const TotalPassenger = [
 
   {
     totalps:"800",
-    year:"2018"
+    year:"2018",
+    direction: "left",
   },
   {
     icon:<TiWorld size={60} color='#4CAF50'/>,
-
+    direction: "right",
   },
   {
     totalps:"800",
-    year:"2018"
+    year:"2018",
+    direction: "top",
   },
   ]
 
@@ -23,41 +26,66 @@ export default function WeFeelHappy() {
     <>
     <section className='we-happy'>
         <div className=' container'>
-        <div className='row mt-5  '>
+        <div className='row mt-1  mt-lg-5'>
            <div className='col-12 col-lg-6'>
-            <h4 className={`fs-24 mfs-19  fw7`}><span className='logo-clr fw7'> We Feel Happy </span> To Help You</h4>
+           <ScrollAnimation direction="top" delay={0.4}>
+            <h4 className={`fs-24 mfs-19  fw7 green-clr`}><span className='logo-clr fw7'> We Feel Happy </span> To Help You</h4>
+            </ScrollAnimation>
+            <ScrollAnimation direction="left" delay={0.6}>
             <p className={`fs19 lh33 mfs-16  mt16  pdt20`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            </ScrollAnimation>
+            <ScrollAnimation direction="right" delay={0.8}>
             <p className={`fs-19 mfs-16 mt16  pdt20`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+             </ScrollAnimation>
            </div>
            <div className='col-12 col-lg-6'>
+           <ScrollAnimation direction="top" delay={0.9}>
             <div className='df fjc mmt10'>
+
            <div className='total-passenger tac '>
               <p className={`fs-14 cw count-bg `}> 1000+ </p>
               <p className={`fs-14 cb mt-1`}> Total Passenger In</p>
               <p className={`fs-14 cb`}> 2022 </p>
               </div>
               </div>
-     <div className='circle-df gap5 mt-3'>
+              </ScrollAnimation>
+              <ScrollAnimation direction="right" delay={1}>
+     <div className='circle-df gap20 fjc mt-3'>
 {TotalPassenger.map((items,index)=>{
-  return(
-<div className='total-passenger tac ' key={index}>
-{items.icon && (
-  <div className='umrah-circle tac '>  <p className={`fs-14 cw`}>{items.icon}</p>
- <p className={`fs-14 fw6`}>Umrah Tour <br/>Package</p>
- </div>)}
-{items.totalps && items.year &&
-<>
-<p className={`fs-14 cw count-bg count-bg s`}>{items.totalps}</p><p className={`fs-14 cb mt-1`}> Total Passenger In</p><p className={`fs-14 cb`}>{items.year}</p>
-</>}
-</div>)})}
-
+   return (
+    <ScrollAnimation
+      key={index}
+      direction={items.direction}
+      delay={1.2 + index * 0.8}
+    >
+      <div className='total-passenger tac'>
+        {items.icon && (
+          <div className='umrah-circle tac'>
+            <p className={`fs-14 cw`}>{items.icon}</p>
+            <p className={`fs-14 fw6`}>Umrah Tour <br />Package</p>
+          </div>
+        )}
+        {items.totalps && items.year && (
+          <>
+            <p className={`fs-14 cw count-bg`}>{items.totalps}</p>
+            <p className={`fs-14 cb mt-1`}> Total Passenger In</p>
+            <p className={`fs-14 cb`}>{items.year}</p>
+          </>
+        )}
+      </div>
+    </ScrollAnimation>
+  );
+})}
 </div>
+</ScrollAnimation>
+<ScrollAnimation direction="bottom" delay={1}>
               <div className='df fjc mt-3'>
            <div className='help-circle tac '>
               <Ri24HoursLine size={60} color='#000000'/>
               <p className={`fs-14 cb fwb`}>24/7 Support <br/> 8124289972</p>
               </div>
               </div>
+              </ScrollAnimation>
           </div>
         </div>
         </div>
@@ -72,6 +100,7 @@ export default function WeFeelHappy() {
     background-size: cover;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 60px 15px 55px;
+   overflow:hidden;
         }
     .circle-df{
     display: flex;
@@ -125,11 +154,22 @@ export default function WeFeelHappy() {
     .circle-df{
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     
     }
-    .umrah-circle{
-    display: none;
+            .we-happy{
+        background-image: url('/assets/images/we-feel-happy/map.webp');
+    background-color: #f9f9f9;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 10px 15px 20px 0px;
+        overflow:hidden;
     }
+    // .umrah-circle{
+    // display: none;
+    // }
     }
         `}
     </style>

@@ -21,16 +21,21 @@ export default function ExperincedGuidence() {
     <section className="bg-card">
               {/* Cards Div */}
               <div className="container">
+
+              <h4 className="fs-33 mfs-24 fw7 tac pdb50 mpdb0">Some heading Are there</h4>
+
           <div className='mt-5 row'>
 
             {GuideBox.map((items,index)=>{
                 return(
-                    <div className="col-12 col-lg-6 mpdt40">  
-        <div className='card pos-r  pdt80' key={index}>
+                    <div className="col-12 col-lg-6 mpdt100">  
+        <div className='card pos-r  pdt80 pdb30' key={index}>
           <div className='img-pos'>
           <Image className='' src={items.icon} width="100" height="100" alt='Flight-Icon' loading='lazy'/>
           </div>
-           <h6 className={`fs-24 mfs-19 tac`}>{items.heading}</h6>
+           <h6 className={`fs-24 mfs-19 tac`} > <span className="logo-clr">{items.heading.split(' ')[0]} </span>
+                    {items.heading.split(' ').slice(1).join(' ')}
+                  </h6>
            <p className={`fs14 lnh27 ls04 mfs-14 pdt16 mpdt10 taj`}>{items.cnt}</p>
         </div>
  
@@ -54,7 +59,7 @@ export default function ExperincedGuidence() {
               background-color: #FFFFFF;
               border-radius: 10px;
               // box-shadow: 0px 4px 16px 0px #00000040;
-              height: 250px;
+              height: 100%;
               padding-left: 20px;
               padding-right: 20px;
               }
@@ -82,7 +87,8 @@ export default function ExperincedGuidence() {
           background-repeat: no-repeat;
           width: 100%;
           height: 100%;
-          padding: 0px;
+          padding: 40px 0px;
+
     }
 
               }

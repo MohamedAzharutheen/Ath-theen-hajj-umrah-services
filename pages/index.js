@@ -9,6 +9,8 @@ import Layout from '@/component/layout'
 import OurAchivement from '@/component/our-achivement'
 import PackageCard from '@/component/packages/package-card'
 import ServiceCards from '@/component/services/service-cards'
+import Testimonial from '@/component/slider/testmonial'
+import TestimonialCarousel from '@/component/slider/testmonial'
 import WeFeelHappy from '@/component/we-feel-happy'
 import WhyChooseAthTheen from '@/component/why-chooseus'
 import React, { useEffect, useState } from 'react'
@@ -55,14 +57,15 @@ useEffect(()=>{
       <Banner/>
       <WeFeelHappy/>
       <ServiceCards/>
-      <OurAchivement/>
+ 
       <HajjGateway/>
       <ExperincedGuidence/>
       <CategorySection/>
-      <WhyChooseAthTheen/>
+      {/* <WhyChooseAthTheen/> */}
+      <OurAchivement/>
       <Journey/>
       <BoxBanner/>
-
+      <Testimonial/>
      <Faqs FaqQus={FaqQus}/>
       {/* <Gallery/> */}
       {isVisible &&

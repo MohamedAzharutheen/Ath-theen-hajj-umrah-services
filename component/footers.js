@@ -96,10 +96,8 @@ export default function Footers() {
         }
 
         .social-icon{
-              // border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid #fff;
                 padding: 10px 16px;
-                
+                border-bottom: 1px solid #FFFFFF99;
         }
         iframe{
         border-radius: 20px;
@@ -129,8 +127,7 @@ export default function Footers() {
         }
         .footer-bottom{
          background-color: rgba(16, 12, 8, 0.9);
-            border-top: 1px solid #fff;
-            border-bottom: 4px solid #fff;
+            border-top: 1px solid #FFFFFF99;
         }
 
         

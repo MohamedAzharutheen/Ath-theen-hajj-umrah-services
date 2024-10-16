@@ -25,7 +25,7 @@ export default function OurAchivement() {
     <>
     <section className='container'>
   <div className='mt70 mmt25'>
-    <h4 className={`fs-33 mfs-19 mtac fwb`}>Our Great  <span className={`logo-clr fwb`}> Achievement </span> </h4>
+    <h4 className={`fs-33 mfs-19 mtac fwb logo-clr`}>Our Great  <span className={` green-clr fwb`}> Achievement </span> </h4>
         <div className='mt32 mmt2'>
             <div className='df gap20 mfw'>
 

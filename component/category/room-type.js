@@ -13,7 +13,7 @@ export default function RoomType() {
     <>
       <section className='mt-4'>
         <div className='container-fluid'>
-          <p className='fs18 mfs-16 lnh33 ls05 text-white'>
+          <p className='fs18 mfs-14 mlnh27  lnh33 ls05 drk-clr'>
             Due to the high demand for accommodations in Makkah and Madinah during the Hajj season, accommodation services may differ from other times of the year. Some service providers may offer single rooms. However, the majority of rooms will be offered on a sharing basis. Packages will include a single bed in a shared room, which may vary between double, triple, or quadruple rooms. Service providers will make an effort to accommodate rooming preferences to the best of their ability. However, it should be noted that the selection of roommates is not guaranteed.
           </p>
 
@@ -22,9 +22,9 @@ export default function RoomType() {
               <div key={index} className='col-12 col-md-6 col-lg-3 mb-3'>
                 {/* Render icons dynamically based on the number of beds */}
                 {Array.from({ length: room.beds }).map((_, i) => (
-                  <MdOutlineBedroomParent key={i} size={50} color='#b49164' />
+                  <MdOutlineBedroomParent key={i} size={34} className='drk-clr'/>
                 ))}
-                <p className='fs-16 mfs-14 text-white mt-2'>{room.type}</p>
+                <p className='fs-16 mfs-14  mt-2 lgh-bri fwb'>{room.type}</p>
               </div>
             ))}
           </div>

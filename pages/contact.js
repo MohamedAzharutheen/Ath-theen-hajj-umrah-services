@@ -8,7 +8,7 @@ export default function Contact() {
     <>
        <Layout>
         <Address/>
-       <EnquiryForm/>
+
        </Layout>
 
 

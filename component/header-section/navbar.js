@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import SidebarMenu from './mobile-nav';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function Navbar() {
       <section className='header'>
         <div className='container-fluid'>
           <div className=' df fac fjse fjc mdn'>
-          <Link href={"/"}><p className='fs-16 fwb'>Home</p></Link>
+          <Link className='' href={"/"}><p className='fs-16 fwb'>Home</p></Link>
           <Link href={"/"}><p className='fs-16 fwb'>Packages</p></Link>
             <Link href={"/gallery"}><p className='fs-16 fwb'>Gallery</p></Link>
 
@@ -27,9 +27,9 @@ export default function Navbar() {
             <Link href={"/contact"}><p className='fs-16 fwb'>Contact Us</p></Link>
           </div>
 
-          <div className='mdf fjse fac dn mdb'>
+          <div className='mdf fjsb fac dn mdb'>
             <div className=''>
-              <Image src={"/assets/images/logos/logo.svg"} width={40} height={40} alt='Logo' loading='lazy' quality={100} />
+              <Image src={"/assets/images/logos/logo.svg"} width={60} height={60} alt='Logo' loading='lazy' quality={100} />
             </div>
 
             {/* Burger icon for mobile */}
@@ -38,11 +38,12 @@ export default function Navbar() {
               <span></span>
               <span></span>
             </div>
+
           </div>
         </div>
 
         {/* Off-canvas sidebar */}
-        <motion.div
+        {/* <motion.div
           className='side-bar'
           initial={{ x: '-100%' }}
           animate={{ x: isMenuOpen ? 0 : '-100%' }}
@@ -58,9 +59,14 @@ export default function Navbar() {
             <Link href={"/"}><p className='fs-19 '>Packages</p></Link>
           </div>
           )}
-        </motion.div>
+        </motion.div> */}
       </section>
 
+
+    {isMenuOpen &&
+       <SidebarMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen}/>
+}
+       
       <style jsx>{`
         .header {
           background: linear-gradient(90deg, #e9c751 0%, #ffffff 100%);
@@ -73,22 +79,25 @@ export default function Navbar() {
           background: linear-gradient(90deg, #e9c751 0%, #ffffff 100%);
           border-bottom: 1px solid #ffffff;
           width: 100%;
-          padding: 10px;
+          padding: 5px;
         }
           .burger-menu {
             cursor: pointer;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            width: 30px;
-            height: 20px;
-            z-index: 100;
+        width: 40px;
+            height: 33px;
+        z-index: 100;
+        border: 1px solid #D0AB17;
+        padding: 5px;
+        border-radius: 5px;
           }
 
           .burger-menu span {
             height: 3px;
             width: 100%;
-            background: #333;
+            background: #D0AB17;
             border-radius: 10px;
           }
 

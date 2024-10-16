@@ -227,11 +227,11 @@ export default function ServiceCards() {
 
   return (
     <>
-      <section className='bg-slide mt-5 pdtb40'>
+      <section className='bg-slide  pdtb40'>
         <div className='container-fluid'>
           {/* Box */}
            <div className="">
-            <h4 className="cw tac fs-33 mfs-24 fwb"> <span className="logo-clr fwb">Our Service </span>  Categories</h4>
+            <h4 className="tac fs-33 mfs-24 green-clr fwb "> <span className="logo-clr fwb">Our Service </span>  Categories</h4>
            </div>
           <Slider {...settings}>
             {servicesData.map((items, index) => {
@@ -282,9 +282,17 @@ export default function ServiceCards() {
 
       <style jsx>{`
 
-.bg-slide{
-background: #2E2E2E;
-}
+.bg-slide{  
+       background-image: url('/assets/images/services-img/flight-icon.svg');
+            width:100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: cover;
+            background-size: 100% 100%;
+            
+        }
 .col {
   width: 100%; // Set the width to 100% for smaller screens
   margin-bottom: 52px;
@@ -330,13 +338,25 @@ background: #2E2E2E;
           border: none;
           padding: 10px;
         }
+        @media only screen and (max-width: 768px){
+        
+                  .bg-slide{  
+        background-image: none; 
+
+            
+        }
+        }
 
         @media only screen and (max-width: 420px){
          .title-box{
    position: relative;
    top: 5%;
    left: 50%;
-   background-color: #F4E2E6;
+background: rgba(255, 255, 255, 0.3); /* Example: Light mirror effect with transparency */
+  backdrop-filter: blur(10px);          /* Apply a blur effect for a mirror-like look */
+  -webkit-backdrop-filter: blur(10px);  /* Ensure compatibility with webkit browsers */
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Optional: A soft border to enhance the mirror effect */
+
     transform: translate(-50%, -80%);
     border-radius: 8px;
     width: 200px;
@@ -354,6 +374,7 @@ background: #2E2E2E;
           position: relative; /* To position button absolutely */
           margin: 0 10px; /* Add horizontal margin for spacing between cards */
         }
+
         }
 
       `}</style>

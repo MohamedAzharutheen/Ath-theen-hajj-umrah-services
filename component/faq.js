@@ -19,7 +19,7 @@ export default function Faqs({FaqQus}) {
    <section className='bg pdb50 mpdb10'>
     <div className='pdt48 mpdt24'>
     <div className='container '>
-    <h4 className={`fs-33 mfs-19 mtac fwb tac`}> <span className={`logo-clr fwb`}> Frequently   </span> Ask Questions </h4>
+    <h4 className={`fs-33 mfs-19 mtac fwb tac green-clr`}> <span className={`logo-clr fwb`}> Frequently   </span> Ask Questions </h4>
         <div className='df mt70 mfdc mfjc  mmt32 '>
         <div className='w40p df fac mdn' style={{ position: 'relative', width: '100%', height: 'auto' }}>
     <Image 

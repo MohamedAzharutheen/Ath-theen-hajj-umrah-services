@@ -2,6 +2,7 @@ import React from 'react'
 import { IoLocationSharp } from "react-icons/io5";
 import { FaClock } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
+import EnquiryForm from './enquiry-form';
 export default function Address() {
   return (
    <>
@@ -13,7 +14,7 @@ export default function Address() {
           <div className='card mt40'>
             <div className='row justify-content-center'>
                 <div className='col-3 col-md-2 align-content-center'>
-                <IoLocationSharp size={44} color='#4CAF50'/> 
+                <IoLocationSharp size={64} color='#4CAF50'/> 
                 </div>
                 <div className='col-9 col-md-8'>
                     <p className={`fs-24 fw-bold `}>Our Address</p>
@@ -26,7 +27,7 @@ export default function Address() {
           <div className='card mt40'>
             <div className='row justify-content-center'>
                 <div className='col-2 align-content-center'>
-                <FaPhoneVolume size={30} color='#4CAF50'/>
+                <FaPhoneVolume size={50} color='#4CAF50'/>
                 </div>
                 <div className='col-9 '>
                     <p className={`fs-24 fw-bold `}>ContactUs</p>
@@ -45,7 +46,7 @@ export default function Address() {
         <div className='card mt40'>
             <div className='row justify-content-center'>
                 <div className='col-2 align-content-center'>
-                <FaClock size={34} color='#4CAF50'/> 
+                <FaClock size={60} color='#4CAF50'/> 
                 </div>
                 <div className='col-9 col-md-9'>
                     <p className={`fs-24 fw-bold`}>Working Hours</p>
@@ -58,6 +59,7 @@ export default function Address() {
         </div>
        </div>
     </section>
+    <EnquiryForm/>
     <section className="container-fluid">
     <div className='col-12  google-map mt70'>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.906062180957!2d77.70791197399276!3d8.700470594047102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b041320431936e5%3A0x73e81c295eb83a69!2sLuzosa%20creations!5e0!3m2!1sen!2sin!4v1728722490947!5m2!1sen!2sin" width="100%" height="400" style={{borderRadius:"10px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>

@@ -23,8 +23,8 @@ export default function CategorySection() {
     <>
     <section className='bg-clr'>
        <div className='container-fluid'>
-          <h4 className={`fs-33 tac cw`}>Additional Factors that Differentiate Packages</h4>
-          <p className={`fs-16 tac pdt8 cw`}>In addition to the previously outlined main factors, there are additional considerations that affect the selection and differentiation of Hajj packages.</p>
+          <h4 className={`fs-33 mfs24 ls05 tac fwb`}>Additional Factors that Differentiate Packages</h4>
+          <p className={`fs-16 mfs14 ls05 lnh27 tac pdt8 `}>In addition to the previously outlined main factors, there are additional considerations that affect the selection and differentiation of Hajj packages.</p>
         <div className='tabs-container'> 
          <div className='df fjse mgap20'>
          {tabs.map((items)=>{
@@ -33,8 +33,8 @@ export default function CategorySection() {
             onClick={() => setActiveTab(items.id)}>
 
             <div className=''>
-             <span className='clr'>{items.icon}</span>
-            <p className='fs-19 cb clr'>{items.cnt}</p>
+             <span className='cb'>{items.icon}</span>
+            <p className='fs-19 '>{items.cnt}</p>
             </div>
 
             </div>
@@ -58,10 +58,11 @@ export default function CategorySection() {
     <style jsx>
         {`
          .bg-clr{
-        background: #23282d;
+        background: #d0ab17f5;
           width: 100%;
           padding: 20px 5px;
          }
+
           .category{
            width: 220px;
            padding: 8px 16px;
@@ -72,18 +73,18 @@ export default function CategorySection() {
         color: #b49164;
         }
         .active{
-        background-color: #b49164;
-        border: 1px solid #b49164;
+        background-color: #3A5A23;
+        border: 1px solid #3A5A23;
          border-radius: 10px;
          
          
          
         }
          .active span{
-         color: #000;
+         color: #FFFFFFD9;
          }
          .active p{
-         color: #000;
+         color: #E8DAB2;
          } 
          @media only screen and (max-width: 1023px){
         .tabs-container {

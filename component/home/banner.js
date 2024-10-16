@@ -1,29 +1,45 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import EnquiryForm from '../popup-form';
+import ScrollAnimation from '../animation/scrolling-animations';
 export default function Banner() {
+
+  const [popup,setPopup]=useState(false);
+
+  const handleClick =()=>{
+    setPopup(!popup);
+  }
+
+  const handleFormClose = () => {
+    setPopup(false);
+};
   return (
     <>
-    <section className='bg-img pdb50'>
+    <section className='bg-img pdb50 mpdb25'>
      <div className='container'>
    <div className='df fjsa fac  pdt40 mfdc '>
     <div className='w50p mw100p mb40'>
-      <h4 className={`fs-45 lnh70 mfs-24  fwb`}>Begin Your  <br/><span className='ylw-clr fwb'>  Spiritual Journey  </span><br/>with Ath-Theen</h4>
+    <ScrollAnimation direction="left" delay={0.1}>
+      <h4 className={`fs-45 lnh70  fwb`}>Begin Your  <br/><span className='ylw-clr fwb'>  Spiritual Journey  </span><br/>with Ath-Theen</h4>
+
       <p className={`fs19 mfs-16 mt32`}>Each step toward the sacred cities of Makkah and Madinah is a profound commitment. Ath-Theen Hajj and Umrah Services guide you through every phase, ensuring a rewarding, well-prepared pilgrimage experience that resonates deeply within.</p>
       <div className="mt50">
-            <Link href={`/contact`}>  <button className={` btn-box cursor fs-16 cw`}>Reach Out to Us</button> </Link>
-            </div>
-
+         <button onClick={handleClick} className={` btn-box cursor fs-16 cw`}>Reach Out to Us</button> 
+       </div>
+       </ScrollAnimation>
 
 
     </div>
     <div className='pos-r'>
+    <ScrollAnimation duration={1} direction="right" delay={0.8}>
              <Image className='mdn' src={"/assets/images/banner/hajj.png"} width={480} height={574}  alt='Lady-img' quality={100} loading='lazy'
                style={{ width: '500', height: 'auto' }}/>
              <Image className='dn mdb' src={"/assets/images/banner/hajj.png"} width={290} height={374}  alt='Lady-img' quality={100} loading='lazy'/>
-
+    </ScrollAnimation>
   {/* Animated Active Box - Left */}
+
   <motion.div
                 className="active-box-left pd10"
                 animate={{ y: [0, -40, 0] }}
@@ -64,21 +80,12 @@ export default function Banner() {
    </div>
 
    </div>
-    </section>
 
-    {/* <section className='container'>
-        <div className=''>
-            <Image src={"/master-training/image.png"} width={400} height={400} alt='Imabge' />
-         </div>
-    </section> */}
+    </section>
+    {popup && <EnquiryForm close={handleFormClose}/>}
     <style jsx>
         {`
                 .bg-img{
-            // background-image: url('/assets/images/banner/mainsec-bg.webp');
-            // background: linear-gradient(90deg, #0cc0df, #ffdef9);
-        //  background: linear-gradient(90deg, #e9c751 0%, #ffffff 100%);
-        // background: linear-gradient(90deg, #004D00 0%, #87CEEB 100%);
-
             width:100%;
             height: auto;
             background-size: cover;
@@ -86,7 +93,7 @@ export default function Banner() {
             background-position: center;
             background-position: cover;
             background-size: 100% 100%;
-            
+           overflow:hidden;
         }
          .btn-box { 
               padding: 10px;
@@ -97,7 +104,7 @@ export default function Banner() {
               transition: all 0.4s ease-in-out;
               width: 400px;
                
-
+        }
 
 
            
@@ -124,12 +131,17 @@ export default function Banner() {
               width: 100%;
                
             }
+              .fs-45{
+                font-size: 24px;
+                line-height: 41px;
+                letter-spacing: 1px;
+              }
           .bg-img{
              background-position: center;
                 background-repeat:no-repeat;
              padding-top: 0%;
                  height:100%;
-
+overflow:hidden;
         }
    
 
