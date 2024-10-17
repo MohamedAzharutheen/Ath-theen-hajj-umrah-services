@@ -24,7 +24,7 @@ export default function MinaCamp() {
             {MinaData.map((items,index)=>{
                 return(
             <div className='mt24' key={index}>
-            <h5 className='fs-22 mfs-19 lgh-bri fw5'>{items.heading}</h5>
+            <h5 className='fs-22 mfs-19 drk-vclr fw5'>{items.heading}</h5>
             <p className='fs16 lnh27 ls05 mfs14 drk-clr fw5 pdt16 mpdt10'>{items.cnt}</p>
         </div>
         )

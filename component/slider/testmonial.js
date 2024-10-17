@@ -99,7 +99,7 @@ export default function Testimonial() {
 
       <style jsx>{`
         .bg-clr {
-          background-color: #F5E5AF;
+          background-color: #F3f8f6;
           width: 100%;
           padding-bottom: 80px;
           padding-top: 80px;

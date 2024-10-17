@@ -24,7 +24,7 @@ export default function Navbar() {
             </div>
             <Link href={"/service"}><p className='fs-16 fwb'>Services</p></Link>
             <Link href={"/"}><p className='fs-16 fwb'>Guidence</p></Link>
-            <Link href={"/contact"}><p className='fs-16 fwb'>Contact Us</p></Link>
+            <Link href={"/contact"}><p className='fs-16 fwb btn-cnt cw'>Contact Us</p></Link>
           </div>
 
           <div className='mdf fjsb fac dn mdb'>
@@ -73,7 +73,12 @@ export default function Navbar() {
           border-bottom: 1px solid #ffffff;
           width: 100%;
         }
-
+        .btn-cnt{
+        background: #006C35;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: all 0.3s 
+        }
         @media only screen and (max-width: 1023px) {
                 .header {
           background: linear-gradient(90deg, #e9c751 0%, #ffffff 100%);

@@ -6,17 +6,17 @@ export default function OurAchivement() {
         {
             icon:"",
             count:"4000+",
-            title:"Successfull Service"
+            title:"Personal care and guidance "
         },
         {
             icon:"",
             count:"750+",
-            title:"Active Customer"
+            title:"Confortable transportation"
         },
         {
             icon:"",
             count:"4000+",
-            title:"Alumini Customer"
+            title:"Customer satisfaction"
         },
     ]
 

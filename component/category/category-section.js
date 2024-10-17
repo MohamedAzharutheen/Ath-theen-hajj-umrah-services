@@ -58,7 +58,7 @@ export default function CategorySection() {
     <style jsx>
         {`
          .bg-clr{
-        background: #d0ab17f5;
+          background: linear-gradient(180deg, rgb(214 178 33 / 81%) 0%, rgb(210 174 32 / 82%) 8%, rgba(255, 255, 255, 1) 100%);
           width: 100%;
           padding: 20px 5px;
          }
